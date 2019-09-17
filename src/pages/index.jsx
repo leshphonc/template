@@ -1,7 +1,13 @@
 import React from 'react'
+import { observer, inject } from 'mobx-react'
 
+@inject('home')
+@observer
 class Index extends React.Component {
-  componentDidMount() {}
+  componentDidMount() {
+    const { home } = this.props
+    console.log(home)
+  }
 
   render() {
     return (
